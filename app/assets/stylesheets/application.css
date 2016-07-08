@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color: #efefef !important;
+}
+/* ----- 要素 ----- */
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.text_field {
+  width: 100%;
+}
+
+h3 {
+  font-size: 16px !important;
+}
+
+.comment h3 {
+  margin-top:10px;
+}
+
+hr {
+  margin: 0 !important;
+  border:1px solid #dddddd !important;
+}
+
+/* ----- header ----- */
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+.button_position {
+  position: relative;
+  top: 24px;
+}
+
+.jumbotron {
+  background: url("blackboard.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+}
+
+@media(max-width: 767px) {
+  .jumbotron {
+    height: 200px;
+  }
+}
+.jumbotron h1, .jumbotron p {
+  color: #fff;
+  margin: 5px 0;
+  line-height:
+}
+
+.jumbotron h1 {
+  color: white !important;
+}
+.jumbotron p {
+  font-size: 18px !important;
+}
+
+/* ----- show -----*/
+
+.comment_container {
+  margin: 10px 0 20px;
+}
+
+.comment_wrapper {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.comment {
+  display: inline-block;
+  min-width: 35%;
+  max-width: 80%;
+  padding: 10px 0;
+}
+
+.comment_body {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.comment > p {
+  margin: 0;
+  position: relative;
+  left: 8px;
+}
+
+.agree{
+  background-color: rgba(255,0,0,0.5);
+}
+.disagree{
+  background-color: rgba(0,0,255,0.5);
+}
+
+.red {
+  color: rgba(255,0,0,0.5);
+}
+
+.blue {
+  color: rgba(0,0,255,0.5);
+}
+
+.large {
+  font-size: 1.5em;
+}
+
+/* ----- footer ----- */
+
+footer {
+    height: 40px;
+    clear: both;
+}
+
+@media(max-width: 767px) {
+  .only_mobile_brank:before {
+    content: "\A" ;
+  	white-space: pre ;
+  }
+}

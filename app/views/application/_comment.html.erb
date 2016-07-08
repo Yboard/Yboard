@@ -1,0 +1,21 @@
+<% if comment.agree == false %>
+  <div class="comment right">
+    <p><span class="blue large">反対</span> <%= comment.user_name %>
+    <span class="only_mobile_brank"><%= comment.created_at.to_s(:db) %></span></p>
+    <div class="comment_body disagree">
+      <h3>
+        <%= comment.body %>
+      </h3>
+    </div>
+  </div>
+<% else %>
+  <div class="comment left">
+    <p><span class="red large">賛成</span> <%= comment.user_name %>
+    <span class="only_mobile_brank"><%= comment.created_at.to_s(:db) %></span></p>
+    <div class="comment_body agree">
+      <h3>
+        <%= comment.body %>
+      </h3>
+    </div>
+  </div>
+<% end %>

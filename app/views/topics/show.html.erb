@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="topic_show clearfix">
+    <h2 class="title">
+      <%= @topic.title %>
+    </h2>
+    <h3 class="body">
+      <%= @topic.body %>
+    </h3>
+    <p class="right">
+      投稿者名：<%= @topic.user_name %>
+      <%= @topic.created_at.to_s(:db) %>
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="comment_container">
+    <%= render 'application/comments', comments: @topic.comments %>
+  </div>
+</div>

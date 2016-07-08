@@ -1,0 +1,29 @@
+<%= form_for(topic, :html =>  {:onsubmit => "return check();"} ) do |f| %>
+  <% if topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+      <ul>
+      <% topic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "ユーザー名" %></br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label "タイトル" %></br>
+    <%= f.text_field :title, {:class => "text_field"} %>
+  </div>
+  <div class="field">
+    <%= f.label "本文" %></br>
+    <%= f.text_area :body, {:class => "text_field text_body"} %>
+  </div>
+  <div class="actions">
+    <%= f.submit name="新規投稿"%>
+  </div>
+<% end %>

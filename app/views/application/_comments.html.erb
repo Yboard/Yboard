@@ -1,0 +1,7 @@
+<% if comments %>
+  <% comments.each do |comment| %>
+    <div class="comment_wrapper clearfix">
+      <%= render 'application/comment', comment: comment %>
+    </div>
+  <% end %>
+<% end %>

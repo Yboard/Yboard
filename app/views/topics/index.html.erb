@@ -1,0 +1,30 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Whyを共有しよう</h1>
+    <p>
+      ここは気軽に意見交換・対話できる場です。
+    </br>その際には、"賛成"もしくは"反対"を明確にしてコメントしてください。
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <% @topics.each do |topic| %>
+  <div class="topic_index">
+    <ul>
+      <li>
+        <h2 class="title"><%= link_to "#{topic.title}", topic %></h2>
+      </li>
+      <li>
+        <p><%= truncate(topic.body, length: 80, omission: '...') %></p>
+      </li>
+      <li>
+        <p>
+          投稿者名: <%= topic.user_name %> <%= topic.created_at.to_s(:db) %>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div> <!-- container -->
