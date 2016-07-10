@@ -14,18 +14,18 @@
 ActiveRecord::Schema.define(version: 20160615034327) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "user_name",  limit: 255
-    t.boolean  "agree",                    default: true
-    t.text     "body",       limit: 65535
+    t.string   "user_name"
+    t.boolean  "agree",      default: true
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "topic_id",   limit: 4
+    t.integer  "topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "body",       limit: 65535
-    t.string   "user_name",  limit: 255
+    t.string   "title"
+    t.text     "body"
+    t.string   "user_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

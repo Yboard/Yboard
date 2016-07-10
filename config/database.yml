@@ -10,9 +10,8 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: utf8
-  pool: 5
   username: root
   password:
 
@@ -48,6 +47,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  pool: 5
   database: yboard_production
   username: yboard
   password: <%= ENV['YBOARD_DATABASE_PASSWORD'] %>
