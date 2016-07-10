@@ -87,9 +87,6 @@ header a:hover {
 }
 
 .jumbotron {
-  background: url("blackboard.jpg");
-  background-position: center center;
-  background-size: cover;
   color: #fff;
   height: 200px;
 }
